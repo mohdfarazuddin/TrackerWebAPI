@@ -1,0 +1,15 @@
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.deps.json
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.runtimeconfig.json
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.runtimeconfig.dev.json
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.dll
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.pdb
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\DataAccessLayer\bin\Debug\netcoreapp3.1\BusinessObjects.dll
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\DataAccessLayer\bin\Debug\netcoreapp3.1\BusinessObjects.pdb
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.csprojAssemblyReference.cache
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.AssemblyInfoInputs.cache
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.AssemblyInfo.cs
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.csproj.CoreCompileInputs.cache
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.csproj.CopyComplete
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.dll
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.pdb
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.genruntimeconfig.cache

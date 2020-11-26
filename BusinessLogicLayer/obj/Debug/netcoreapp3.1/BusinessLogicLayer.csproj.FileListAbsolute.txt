@@ -1,0 +1,14 @@
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\BusinessLogicLayer\bin\Debug\netcoreapp3.1\BusinessLogicLayer.deps.json
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\BusinessLogicLayer\bin\Debug\netcoreapp3.1\BusinessLogicLayer.dll
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\BusinessLogicLayer\bin\Debug\netcoreapp3.1\BusinessLogicLayer.pdb
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\BusinessLogicLayer\bin\Debug\netcoreapp3.1\BusinessObjects.dll
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\BusinessLogicLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.dll
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\BusinessLogicLayer\bin\Debug\netcoreapp3.1\BusinessObjects.pdb
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\BusinessLogicLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.pdb
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\BusinessLogicLayer\obj\Debug\netcoreapp3.1\BusinessLogicLayer.csprojAssemblyReference.cache
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\BusinessLogicLayer\obj\Debug\netcoreapp3.1\BusinessLogicLayer.AssemblyInfoInputs.cache
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\BusinessLogicLayer\obj\Debug\netcoreapp3.1\BusinessLogicLayer.AssemblyInfo.cs
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\BusinessLogicLayer\obj\Debug\netcoreapp3.1\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\BusinessLogicLayer\obj\Debug\netcoreapp3.1\BusinessLogicLayer.csproj.CopyComplete
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\BusinessLogicLayer\obj\Debug\netcoreapp3.1\BusinessLogicLayer.dll
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\BusinessLogicLayer\obj\Debug\netcoreapp3.1\BusinessLogicLayer.pdb
