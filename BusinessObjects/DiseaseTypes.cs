@@ -15,7 +15,6 @@ namespace BusinessObjects
 
         public string DiseaseType { get; set; }
 
-        [JsonIgnore]
         public ICollection<TreatmentDetails> TreatmentDetails { get; set; } = new HashSet<TreatmentDetails>();
     }
 }

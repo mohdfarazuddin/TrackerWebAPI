@@ -16,7 +16,7 @@ namespace BusinessLogicLayer.Functions
 
         public async Task<List<StateNames>> GetStates()
         {
-            var states = await _context.StateNames.ToListAsync();
+            var states = await _context.StateNames.OrderBy(s =>s.State).ToListAsync();
             return states;
         }
 
@@ -50,12 +50,12 @@ namespace BusinessLogicLayer.Functions
             var updatedstate = await _context.StateNames.FindAsync(stateid);
             return updatedstate;
         }
-        public  PageList<HospitalDetails> GetHospitals(int id, int page)
+        public async Task<List<HospitalDetails>> GetHospitals(int id)
         {
-            var hospitals = PageList<HospitalDetails>.ToPagedList( _context.Hospitals
+            var hospitals = await _context.Hospitals
                                                     .Include(h => h.Address)
                                                     .Where(h => h.Address.StateID == id)
-                                                    .OrderBy(h => h.Name), page);
+                                                    .OrderBy(h => h.Name).ToListAsync();
             return hospitals;
         }
 

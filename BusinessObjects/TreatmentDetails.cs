@@ -29,7 +29,6 @@ namespace BusinessObjects
 
         public string IsFatality { get; set; }
 
-        [JsonIgnore]
         public PatientDetails Patient { get; set; }
 
         public DiseaseTypes DiseaseType { get; set; }

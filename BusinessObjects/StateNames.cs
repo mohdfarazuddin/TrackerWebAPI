@@ -13,7 +13,6 @@ namespace BusinessObjects
 
         public string State { get; set; }
 
-        [JsonIgnore]
         public ICollection<Address> Address { get; set; } = new HashSet<Address>();
 
     }

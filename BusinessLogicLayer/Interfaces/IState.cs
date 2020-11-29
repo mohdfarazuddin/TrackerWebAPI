@@ -18,7 +18,7 @@ namespace BusinessLogicLayer.Interfaces
 
         Task<StateNames> UpdateState(int stateid, StateNames state);
 
-        PageList<HospitalDetails> GetHospitals(int id,int page);
+        Task<List<HospitalDetails>> GetHospitals(int id);
 
         PageList<PatientDetails> GetPatients(int id,int page);
 

@@ -21,7 +21,6 @@ namespace BusinessObjects
         
         public Address Address { get; set; }
 
-        [JsonIgnore]
         public PatientDetails Patient { get; set; }
 
     }

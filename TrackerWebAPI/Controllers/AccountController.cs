@@ -17,7 +17,7 @@ namespace TrackerWebAPI.Controllers
     {
         [HttpGet]
         [Route("external-login")]
-        public IActionResult GoogleLogin(string provider)
+        public IActionResult GoogleLogin(string provider = "Google")
         {
             var properties = new AuthenticationProperties { RedirectUri = Url.Action("") };
             if(provider == "Google")

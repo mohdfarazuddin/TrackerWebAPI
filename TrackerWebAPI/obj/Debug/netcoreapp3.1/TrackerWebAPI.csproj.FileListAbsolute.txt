@@ -70,5 +70,8 @@ E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\TrackerWebAPI\obj\Debug\netcoreapp3.1
 E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\TrackerWebAPI\obj\Debug\netcoreapp3.1\TrackerWebAPI.pdb
 E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\TrackerWebAPI\obj\Debug\netcoreapp3.1\TrackerWebAPI.genruntimeconfig.cache
 E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\TrackerWebAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\TrackerWebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\TrackerWebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\TrackerWebAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\TrackerWebAPI\obj\Debug\netcoreapp3.1\TrackerWebAPI.csproj.CoreCompileInputs.cache
 E:\PROJECTS\Epidemic Tracker\TrackerWebAPI\TrackerWebAPI\obj\Debug\netcoreapp3.1\TrackerWebAPI.MvcApplicationPartsAssemblyInfo.cache

@@ -19,7 +19,7 @@ namespace TrackerWebAPI.Controllers
         private IHospital _hospitallogic = new BusinessLogicLayer.Functions.HospitalFunctions();
 
         [HttpGet]
-        public IActionResult GetHospitals(int page)
+        public IActionResult GetHospitals([FromQuery]int page=1)
         {
             var hospital =  _hospitallogic.GetHospitals(page);
             var metadata = new
@@ -96,7 +96,7 @@ namespace TrackerWebAPI.Controllers
         }
 
         [HttpGet("{id}/Patients")]
-        public IActionResult GetPatients(int id, int page)
+        public IActionResult GetPatients(int id, [FromQuery] int page = 1)
         {
             var patients =  _hospitallogic.GetPatients(id,page);
             var metadata = new

@@ -13,7 +13,7 @@ namespace BusinessLogicLayer.Interfaces
 
         Task<Dashboard> GetDashboardHospital(int id);
 
-        Task<Dashboard> GetDashboardState(int id);
+        Task<List<Dashboard>> GetDashboardStates();
 
     }
 }

@@ -29,10 +29,10 @@ namespace TrackerWebAPI.Controllers
             return Ok(dashboard);
         }
 
-        [HttpGet("State/{id}")]
-        public async Task<IActionResult> GetDashboardState(int id)
+        [HttpGet("State")]
+        public async Task<IActionResult> GetDashboardStates()
         {
-            var dashboard = await _dashboardlogic.GetDashboardState(id);
+            var dashboard = await _dashboardlogic.GetDashboardStates();
             return Ok(dashboard);
         }
 

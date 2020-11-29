@@ -30,13 +30,10 @@ namespace BusinessObjects
 
         public StateNames StateName { get; set; }
 
-        [JsonIgnore]
         public PatientDetails PatientAddress { get; set; }
 
-        [JsonIgnore]
         public OccupationDetails OccupationAddress { get; set; }
 
-        [JsonIgnore]
         public HospitalDetails HospitalAddress { get; set; }
 
     }

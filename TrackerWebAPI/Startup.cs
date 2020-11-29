@@ -37,7 +37,7 @@ namespace TrackerWebAPI
             })
                 .AddCookie(options =>
                 {
-                    options.LoginPath = "/api/Account/login";
+                    options.LoginPath = "/api/Account/external-login";
                 })
                 .AddGoogle(googleOptions => {
                     googleOptions.ClientId = "829498266017-32fjff71n24bn68rvgg0eabhigk4mpnl.apps.googleusercontent.com";
@@ -47,7 +47,9 @@ namespace TrackerWebAPI
                     facebookOptions.ClientId = "433171077848490";
                     facebookOptions.ClientSecret = "7a3ea6aaece73e8d2f2762d553233113";
                 });
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
             services.AddCors(options =>
             {
                 options.AddPolicy(name : MyPolicy,

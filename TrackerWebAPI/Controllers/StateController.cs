@@ -73,28 +73,16 @@ namespace TrackerWebAPI.Controllers
         }
 
         [HttpGet("{id}/Hospitals")]
-        public IActionResult GetHospitals(int id,int page)
+        public async Task<IActionResult> GetHospitals(int id)
         {
-            var hospitals =  _statelogic.GetHospitals(id,page);
-            var metadata = new
-            {
-                hospitals.TotalCount,
-                hospitals.PageSize,
-                hospitals.CurrentPage,
-                hospitals.TotalPages,
-                hospitals.HasNext,
-                hospitals.HasPrevious
-            };
-
-            Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadata));
-
+            var hospitals =  await _statelogic.GetHospitals(id);
             if (hospitals == null)
                 return NotFound();
             return Ok(hospitals);
         }
 
         [HttpGet("{id}/Patients")]
-        public IActionResult GetPatients(int id,int page)
+        public IActionResult GetPatients(int id, [FromQuery] int page = 1)
         {
             var patients =  _statelogic.GetPatients(id, page);
             var metadata = new

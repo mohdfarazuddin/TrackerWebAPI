@@ -18,7 +18,6 @@ namespace BusinessObjects
 
         public Address Address { get; set; }
 
-        [JsonIgnore]
         public ICollection<TreatmentDetails> TreatmentDetails { get; set; } = new HashSet<TreatmentDetails>();
 
     }

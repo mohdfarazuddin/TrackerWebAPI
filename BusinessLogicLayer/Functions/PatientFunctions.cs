@@ -36,7 +36,8 @@ namespace BusinessLogicLayer.Functions
         {
 
             var patient = await _context.Patients.FindAsync(patientid);
-
+            if (patient == null)
+                return null;
             _context.Entry(patient)
                 .Collection(p => p.Address)
                 .Query()
