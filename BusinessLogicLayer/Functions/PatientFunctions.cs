@@ -141,14 +141,14 @@ namespace BusinessLogicLayer.Functions
 
         public async Task<OccupationDetails> AddOccupation(string patid, OccupationDetails occupation)
         {
-            if (patid != occupation.UniqueID)
-                throw new Exception("Occupation does not matches patient. Try adding occupation details for the same patient");
             if (occupation.Address == null)
                 throw new Exception("Occupation address cannot be null.Try adding occupation address.");
             var address = occupation.Address;
+            occupation.UniqueID = patid;
             occupation.Address = null;
             await _context.OccupationDetails.AddAsync(occupation);
             await _context.SaveChangesAsync();
+            address.OccupationID = occupation.OccupationID;
             await _addresslogic.AddAddress(address);
             return occupation;
         }
@@ -221,6 +221,8 @@ namespace BusinessLogicLayer.Functions
                 if (treatment.DiseaseType == null)
                     throw new Exception("Disease type is not entered. Try Entering Disease Type");
                 diseasetype = treatment.DiseaseType;
+                var dis = await _diseasetypelogic.AddDiseaseType(diseasetype);
+                treatment.DiseaseTypeID = dis.DiseaseTypeID;
                 treatment.DiseaseType = null;
             }
             if (treatment.HospitalID == 0)
@@ -228,14 +230,12 @@ namespace BusinessLogicLayer.Functions
                 if (treatment.Hospital == null)
                     throw new Exception("Hospital Details not entered. Try Entering Hospital Details");
                 hospital = treatment.Hospital;
+                var hos = await _hospitallogic.AddHospital(hospital);
+                treatment.HospitalID = hos.HospitalID;
                 treatment.Hospital = null;
             }
             await _context.TreatmentDetails.AddAsync(treatment);
             await _context.SaveChangesAsync();
-            if (diseasetype != null)
-                await _diseasetypelogic.AddDiseaseType(diseasetype);
-            if (hospital != null)
-                await _hospitallogic.AddHospital(hospital);
             return treatment;
         }
 
@@ -267,6 +267,8 @@ namespace BusinessLogicLayer.Functions
                 if (treatment.DiseaseType == null)
                     throw new Exception("Disease type is not entered. Try Entering Disease Type");
                 diseasetype = treatment.DiseaseType;
+                var dis = await _diseasetypelogic.AddDiseaseType(diseasetype);
+                treatment.DiseaseTypeID = dis.DiseaseTypeID;
                 treatment.DiseaseType = null;
             }
             if (treatment.HospitalID == 0)
@@ -274,14 +276,12 @@ namespace BusinessLogicLayer.Functions
                 if (treatment.Hospital == null)
                     throw new Exception("Hospital Details not entered. Try Entering Hospital Details");
                 hospital = treatment.Hospital;
+                var hos = await _hospitallogic.AddHospital(hospital);
+                treatment.HospitalID = hos.HospitalID;
                 treatment.Hospital = null;
             }
             _context.Entry(treatment).State = EntityState.Modified;
             await _context.SaveChangesAsync();
-            if (diseasetype != null)
-                await _diseasetypelogic.AddDiseaseType(diseasetype);
-            if (hospital != null)
-                await _hospitallogic.AddHospital(hospital);
 
             var updatedtreatment = await _context.TreatmentDetails.FindAsync(patid);
             return updatedtreatment;

@@ -18,7 +18,7 @@ namespace TrackerWebAPI.Controllers
     {
         private IPatient _patientlogic = new BusinessLogicLayer.Functions.PatientFunctions();
 
-        [Authorize]
+        
         [HttpGet]
         public  IActionResult GetPatients([FromQuery]int page = 1)
         {

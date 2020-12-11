@@ -46,6 +46,7 @@ namespace BusinessLogicLayer.Functions
             await _context.SaveChangesAsync();
             address.OccupationID = null;
             address.AddressType = "Hospital";
+            address.HospitalID = hospital.HospitalID;
             await _addresslogic.AddAddress(address);
             return hospital;
         }
@@ -71,6 +72,7 @@ namespace BusinessLogicLayer.Functions
             hospital.Address = null;
             _context.Entry(hospital).State = EntityState.Modified;
             await _context.SaveChangesAsync();
+            //addobj.ID = addid;
             await _addresslogic.UpdateAddress(addid, addobj);
             return hospital;
         }

@@ -21,7 +21,7 @@ namespace BusinessObjects
 
         public DateTime AdmitDate { get; set; }
 
-        public DateTime DischargeDate { get; set; }
+        public DateTime? DischargeDate { get; set; }
 
         public string Prescription { get; set; }
 

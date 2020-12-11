@@ -37,7 +37,19 @@ namespace TrackerWebAPI
             })
                 .AddCookie(options =>
                 {
+                    options.Cookie.HttpOnly = true;
+                    options.Cookie.SecurePolicy = Microsoft.AspNetCore.Http.CookieSecurePolicy.Always;
+                    options.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Strict;
                     options.LoginPath = "/api/Account/external-login";
+                    options.Cookie.Name = "TrackerWebAPI.AuthCookieAspNetCore";
+                    options.Events = new CookieAuthenticationEvents
+                    {
+                        OnRedirectToLogin = redirectContext =>
+                        {
+                            redirectContext.HttpContext.Response.StatusCode = 401;
+                            return Task.CompletedTask;
+                        }
+                    };
                 })
                 .AddGoogle(googleOptions => {
                     googleOptions.ClientId = "829498266017-32fjff71n24bn68rvgg0eabhigk4mpnl.apps.googleusercontent.com";
@@ -52,13 +64,17 @@ namespace TrackerWebAPI
             );
             services.AddCors(options =>
             {
-                options.AddPolicy(name : MyPolicy,
+                options.AddPolicy(name: MyPolicy,
                     builder =>
                     {
-                        builder.WithOrigins("http://127.0.0.1:5500")
-                               .AllowAnyHeader();
+                        builder.WithOrigins("http://localhost:5500")
+                               .AllowAnyHeader()
+                               .WithExposedHeaders("x-pagination")
+                               .AllowAnyMethod()
+                               .AllowCredentials();
                     });
             });
+            //services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -74,6 +90,13 @@ namespace TrackerWebAPI
             app.UseRouting();
 
             app.UseCors(MyPolicy);
+
+            //app.UseCors(policy =>
+            //{
+            //    policy.AllowAnyOrigin();
+            //    policy.AllowAnyMethod();
+            //    policy.AllowCredentials();
+            //});
 
             app.UseAuthentication();
 

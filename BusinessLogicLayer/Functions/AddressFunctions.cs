@@ -68,6 +68,7 @@ namespace BusinessLogicLayer.Functions
             if (address.StateID == 0)
                 throw new Exception("Address does not contain state. Try adding state detail in address.");
             _context.Entry(address).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
             var updatedaddress = await _context.Addresses.FindAsync(id);
             return updatedaddress;
         }

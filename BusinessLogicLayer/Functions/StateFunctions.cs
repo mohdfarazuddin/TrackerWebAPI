@@ -54,6 +54,7 @@ namespace BusinessLogicLayer.Functions
         {
             var hospitals = await _context.Hospitals
                                                     .Include(h => h.Address)
+                                                        .ThenInclude(a => a.StateName)
                                                     .Where(h => h.Address.StateID == id)
                                                     .OrderBy(h => h.Name).ToListAsync();
             return hospitals;
